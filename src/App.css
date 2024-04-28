@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+
+}
+
+.SignIn {
+  background-image: url('./images/Capture.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.SignIn .absoBtn {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background-color: transparent;
+  padding: 10px 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.SignIn form {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+
+.emailForm,
+.passwordForm {
+  width: 100%;
+  color: white;
+}
+
+.SignIn form input {
+  width: calc(100% - 20px);
+  max-width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+
+.SignIn form .imageForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+
+
+.SignIn form .imageForm .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+
+.SignIn form button {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+
+.Register {
+  background-color: red;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-image: url('./images/Capture.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+}
+
+.Register form {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.Register form .inputCon {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.Register input {
+  height: 30px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: calc(100% - 20px);
+  border-radius: 20px;
+
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.Register button {
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: white;
+  cursor: pointer;
+}
+
+.Register form .inputCon .emailForm {
+  width: 100%;
+}
+
+.Register form .inputCon .emailForm input {
+  width: 100%;
+}
+
+.Register form .inputCon .passwordForm {
+  width: 100%;
+}
+
+.Register form .inputCon .passwordForm input {
+  width: calc(100% - 20px);
+}
+
+
+.Register .imageForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+
+
+.Register form .imageForm .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+
+.Register {
+  position: relative;
+}
+
+.Register .absoBtn {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  background-color: transparent;
+  padding: 10px 16px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+
+.Menu {
+  height: 100vh;
+  background-image: url('./images/Capture.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+.Menu .menuCon {
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 100%;
+  max-width: 700px;
+
+}
+
+.Menu .menuCon .menuItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.Menu .menuCon .user {
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+.menuCon .menuCon .user .imageText {
+  display: flex;
+  align-items: center;
+}
+
+.Menu .menuCon .menuItems .item {
+  height: 100%;
+  width: 100%;
+  background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: white;
+  font-size: 2rem;
+  justify-content: center;
+  cursor: pointer;
+}
+
+
+
+
+
+/* sidebar css */
+
+.Inventory {
+  display: flex;
+  height: calc(100vh - 20px);
+  gap: 10px;
+  padding: 10px;
+  
+}
+
+.Sidebar {
+  background-color: transparent;
+  height: calc(100% - 20px);
+  padding: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: aliceblue;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+}
+
+.Sidebar .midCon .item {
+  display: flex;
+  gap: 10px;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  align-items: center;
+  border-left: 5px solid #ccc;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.Sidebar .midCon .image {
+  font-size: clamp(1rem, 5vw, 3rem);
+  display: flex;
+  align-items: center;
+}
+
+.Sidebar .midCon {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.Sidebar .back {
+  width: 100%;
+  text-align: center;
+  background-color: #ccc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.Sidebar .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  background-color: #ccc;
+}
+
+
+.Inventory .inventoryCon {
+  width: 100%;
+  height: calc(100% - 20px);
+  padding: 10px;
+  position: relative;
+}
+
+
+.AddModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+
+.AddModal .close {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.AddModal input,
+.AddModal select {
+  height: 30px;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+
+.AddModal .close button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.AddModal button {
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.inventoryCon .upperHeader {
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  justify-content: space-between;
+}
+
+.search {
+  width: 100%;
+}
+
+.inventoryCon .upperHeader .search input {
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+  border: none;
+  background-color: transparent;
+  border: 2px solid black;
+  outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+
+
+.inventoryCon .upperHeader .addModal {
+  display: flex;
+  width: 100%;
+  max-width: 200px;
+  background-color: transparent;
+  border: 2px solid black;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 10px;
+  padding: 7px 0px;
+  font-size: clamp(1rem, 5vw, 1.3rem);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.inventoryCon table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.inventoryCon table thead th {
+  background-color: red;
+  padding: 10px;
+  color: white;
+}
+
+.inventoryCon table tbody tr td {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0px;
+}
+
+
+
+
+/* reports css */
+
+
+.Report {
+  padding: 10px;
+  height: calc(100vh - 20px);
+  gap: 10px;
+  display: flex;
+}
+
+.Report .repCon {
+  width: 100%;
+}
+
+.Report .repCon table {
+  width: 100%;
+}
+
+.Report .repCon table th {
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.Report .repCon table td {
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+.Report .repCon .tableCon {
+  height: 100%;
+  max-height: 300px;
+  overflow: auto;
+}
+
+
+.Report .repCon .actCon {
+  width: 100%;
+  margin-top: 20px;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+}
+
+.activityContainer .scrolls:nth-child(1) {
+  border: 1px solid green;
+  height: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 20px;
+}
+.activityContainer .scrolls:nth-child(2) {
+  border: 1px solid orange;
+  height: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 20px;
+
+}
+.activityContainer .scrolls:nth-child(3) {
+  border: 1px solid red;
+  height: calc(100% - 20px);
+  padding: 10px;
+  border-radius: 20px;
+  overflow-y: scroll;
+}
+.activityContainer .scrolls {
+  overflow-y: scroll;
+}
+.activityContainer .scrolls::-webkit-scrollbar {
+  display: none;
+}
+.activityContainer {
+  display: flex;
+  height: 100%;
+  max-height: 40%;
+  gap: 10px;
+}
+
+.repCon .actCon .actItem {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: aliceblue;
+  width: calc(100% - 50px);
+  padding: 20px;
+  margin-top: 10px;
+  align-items: center;
+
+}
+
+.repCon .actCon .actItem span:nth-child(1) {
+  font-weight: bold;
+}
+
+
+
+
+/* file maintenance */
+
+
+.FileMain {
+  padding: 10px;
+  height: calc(100vh - 20px);
+  gap: 10px;
+  display: flex;
+}
+
+
+.FileMain .inventoryCon {
+  width: 100%;
+}
+
+
+.FileMain .inventoryCon .upperHeader .text {
+  width: 100%;
+  font-weight: bold;
+}
+
+.FileMain .inventoryCon .upperHeader .search {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/* forget password */
+
+.ForgotPass {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./images/Capture.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.ForgotPass form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.ForgotPass form input{
+height: 30px;
+border-radius: 20px;
+border: none;
+outline: none;
+background-color: transparent;
+border: 1px solid #ccc;
+color: white;
+padding: 10px;
+}
+
+
+.ForgotPass form button{
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  }
+  
+  .ForgotPass .forgetText {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .ForgotPass {
+    position: relative;
+  }
+
+  .ForgotPass .absoBtn {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    color: white;
+    cursor: pointer;
+  }
+
+  .forgot {
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    color: white;
+  }
+
+
+.Alert {
+  display: flex;
+  height: calc(100vh - 20px);
+  padding: 10px;
+  gap: 10px;
+}
+.alertContent {
+  width: 100%;
+  padding: 10px;
+}
+.alertConContent {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  width: 100%;
+}
+
+.alertItem {
+  background-color: aliceblue;
+  width: calc(100% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+}
+.alertItem span {
+  font-weight: bold;
+}
+
+.alertItem span:nth-child(3) {
+  font-weight: bold;
+  color: green;
+}
