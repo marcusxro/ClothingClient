@@ -152,6 +152,27 @@ const FileMain = () => {
 
 
 
+    const [selectVal, setSelectVal] = useState('');
+    const [Types, setTypes] = useState('');
+    const [Colors, setColors] = useState('');
+    const [Sizes, setSizes] = useState('');
+
+    useEffect(() => {
+        let updatedData = data; // Use let instead of const
+        
+        if (selectVal === 'Type') {
+            updatedData = data.filter((itm) => itm.Type === Types);
+        } else if (selectVal === 'Color') {
+            updatedData = data.filter((itm) => itm.Color === Colors);
+        } else if (selectVal === 'Size') {
+            updatedData = data.filter((itm) => itm.Size === Sizes);
+        }
+        setFil(updatedData);
+    }, [selectVal, Types, Colors, Sizes, filteredData, data]);
+    
+    
+
+
 
     return (
         <div className='FileMain'>
@@ -170,6 +191,54 @@ const FileMain = () => {
 
                 </div>
 
+                <select
+                    name=''
+                    id=''
+                    value={selectVal}
+                    onChange={(e) => {
+                        setSelectVal(e.target.value);
+                    }}
+                >
+                    <option value=''>Find by</option>
+                    <option value='Size'>Size</option>
+                    <option value='Type'>Type</option>
+                    <option value='Color'>Color</option>
+                </select>
+
+                {selectVal === 'Size' && (
+                    <select required value={Sizes} onChange={(e) => setSizes(e.target.value)}>
+                        <option value=''>Choose Size</option>
+                        <option value='XXS'>XXS</option>
+                        <option value='XS'>XS</option>
+                        <option value='S'>S</option>
+                        <option value='M'>M</option>
+                        <option value='L'>L</option>
+                        <option value='XL'>XL</option>
+                        <option value='XXL'>XXL</option>
+                    </select>
+                )}
+                {selectVal === 'Type' && (
+                    <select required value={Types} onChange={(e) => setTypes(e.target.value)}>
+                        <option value=''>Enter Type</option>
+                        <option value='Polo Shirt'>Polo Shirt</option>
+                        <option value='Knitted Shirt'>Knitted Shirt</option>
+                        <option value='Halter Top'>Halter Top</option>
+                        <option value='T-Shirt'>T-Shirt</option>
+                    </select>
+                )}
+
+                {selectVal === 'Color' && (
+                    <select required value={Colors} onChange={(e) => setColors(e.target.value)}>
+                        <option value=''>Choose Color</option>
+                        <option value='White'>White</option>
+                        <option value='Red'>Red</option>
+                        <option value='Blue'>Blue</option>
+                        <option value='Green'>Green</option>
+                        <option value='Yellow'>Yellow</option>
+                        <option value='Black'>Black</option>
+                        <option value='Purple'>Purple</option>
+                    </select>
+                )}
 
                 <table>
                     <thead>
@@ -187,8 +256,8 @@ const FileMain = () => {
 
                     <tbody>
                         {filteredData.length === 0 && (<>No items found!</>)}
-                        {filteredData.map((itm) => (
-                            <tr key={itm._id}>
+                        {filteredData.slice().reverse().map((itm) => (
+                            <tr key={itm._id} className={`${parseInt(itm.Quantity) <= 50 && "lowStock"}`}>
                                 <td>
                                     {itm._id === isEq ?
                                         <input type="text" placeholder='Enter Brand' value={Brand} onChange={(e) => { setBrand(e.target.value) }} />

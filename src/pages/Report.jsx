@@ -99,24 +99,27 @@ const Report = () => {
                 <h1>User Activity</h1>
 
                 <div className="activityContainer">
-                            <div className="scrolls">
-                            <div className="actCon">
-                        {data.map((itm) => (
-                            <div className="actItem" key={itm.key}>
-                                <span>{itm.Username} </span> added <span>{itm.Brand}</span> on{' '}
-                                <span>
-                                    {itm.Date
-                                        ? moment(new Date(parseInt(itm.Date, 10))).format(
-                                            'MMMM Do YYYY, h:mm a'
-                                        )
-                                        : 'No Dates at the moment'}
-                                </span>
-                            </div>
-                        ))}
-                    </div>
-                            </div>
                     <div className="scrolls">
                         <div className="actCon">
+                        {data.length === 0 && <div className="actItem">No items</div>}
+                            {data.map((itm) => (
+                                <div className="actItem" key={itm.key}>
+                                    {data.length === 0 && "no items"}
+                                    <span>{itm.Username} </span> added <span>{itm.Brand}</span> on{' '}
+                                    <span>
+                                        {itm.Date
+                                            ? moment(new Date(parseInt(itm.Date, 10))).format(
+                                                'MMMM Do YYYY, h:mm a'
+                                            )
+                                            : 'No Dates at the moment'}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="scrolls">
+                        <div className="actCon">
+                        {editedItem.length === 0 && <div className="actItem">No items</div>}
                             {editedItem.map((itm) => (
                                 <div className="actItem" key={itm.key}>
                                     <span>{itm.Username} </span> edited <span>{itm.Brand}</span> on{' '}
@@ -131,22 +134,22 @@ const Report = () => {
                             ))}
                         </div>
                     </div>
-                            <div className="scrolls">
-                            <div className="actCon">
-                        {deletedItem.map((itm) => (
-                            <div className="actItem" key={itm.key}>
-                                <span>{itm.Username} </span> deleted <span>{itm.Brand}</span> on{' '}
-                                <span>
-                                    {itm.Date
-                                        ? moment(new Date(parseInt(itm.Date, 10))).format(
-                                            'MMMM Do YYYY, h:mm a'
-                                        )
-                                        : 'No Dates at the moment'}
-                                </span>
-                            </div>
-                        ))}
+                    <div className="scrolls">
+                        <div className="actCon">
+                            {deletedItem.length === 0 && <div className="actItem">No items</div>}
+                            {deletedItem.map((itm) => (
+                                <div className="actItem" key={itm.key}>
+                                    <span>{itm.Username} </span> deleted <span>{itm.Brand}</span> on{' '}
+                                    <span>
+                                        {itm.Date
+                                            ? moment(new Date(parseInt(itm.Date, 10))).format('MMMM Do YYYY, h:mm a')
+                                            : 'No Dates at the moment'}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+
                     </div>
-                            </div>
                 </div>
 
 

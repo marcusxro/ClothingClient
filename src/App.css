@@ -468,6 +468,7 @@
 .inventoryCon table tbody tr td {
   border-bottom: 1px solid #ccc;
   padding: 10px 0px;
+  text-align: center;
 }
 
 
@@ -500,6 +501,7 @@
 .Report .repCon table td {
   padding: 10px 0px;
   border-bottom: 1px solid #ccc;
+  text-align: center;
 }
 
 .Report .repCon .tableCon {
@@ -699,6 +701,9 @@ padding: 10px;
   border: 1px solid #ccc;
   border-radius: 20px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .alertItem span {
   font-weight: bold;
@@ -707,4 +712,32 @@ padding: 10px;
 .alertItem span:nth-child(3) {
   font-weight: bold;
   color: green;
+}
+
+.goRight {
+  font-size: 2rem;
+  padding-right: 5px;
+  color: white;
+}
+.warningIcon {
+  display: flex;
+  align-items: center;
+}
+
+.warning {
+  background-color: red;
+  color: white;
+}
+
+.actItem {
+  width: 100%;
+}
+
+table td tr {
+  padding: 10px;
+}
+.lowStock{
+  background-color: #D9534F;
+  color: white;
+  padding: 10px;
 }

@@ -7,9 +7,9 @@ const Alert = () => {
 
     useEffect(() => {
         axios.get('http://localhost:8080/getAlerts')
-        .then((res) => {
-            setData(res.data)
-        }).catch((err) => {console.log(err)})
+            .then((res) => {
+                setData(res.data)
+            }).catch((err) => { console.log(err) })
     }, [data])
 
 
@@ -24,8 +24,19 @@ const Alert = () => {
 
                 <div className="alertConContent">
                     {data.map((itm) => (
-                        <div key={itm.key} className="alertItem">
-                                <span>{itm.Username}</span> updated <span>{itm.Product}</span>'s quantity from {itm.OldQuan} to {itm.Quantity} on <span>{moment(new Date(parseInt(itm.Date, 10))).format('MMMM Do YYYY, h:mm a')}</span>
+                        <div key={itm.key} className={`alertItem ${parseInt(itm.Quantity) <= 50 && "warning"}`}>
+                            <span className='goRight'> {parseInt(itm.Quantity) < 50 ?
+                                <div className='warningIcon'>
+                                    <ion-icon name="warning-outline"></ion-icon>
+                                    </div>
+                                : (<></>)}</span>
+                            <span>{itm.Username}</span> updated
+                            <span> {itm.Product}</span>'s quantity from {itm.OldQuan} to
+                            <span>         {itm.Quantity}</span> on <span> {moment(new Date(parseInt(itm.Date, 10))).format('MMMM Do YYYY, h:mm a')}</span>
+
+
+
+
                         </div>
                     ))}
                 </div>
